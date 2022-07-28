@@ -1,0 +1,32 @@
+<!-- {% block content %}
+    <h1>User Details</h1>
+    <div>
+        <p><h3>Name of the User :</h3></p>
+        {{name}}
+    </div>
+    <div>
+        <p><h3>Email Address of the User :</h3></p>
+        {{email_add}}
+    </div>
+    <div>
+        <p><h3>Password of the User :</h3></p>
+        {{password}}
+    </div>
+{% endblock content%} -->
+
+{% block content %}
+    <div>
+        {% for user in users %}
+        <div>
+            <h3>User Name:</h3>
+            <p>{{ user['username'] }}</p>
+            <h3>User Email:</h3>
+            <p>{{ user['email']}}</p>
+            <h3>User Password:</h3>
+            <p>{{ user['password']}}</p></p>
+            <br></br>
+            
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content%}
